@@ -14,42 +14,230 @@
     ul{padding-left:20px}
     code{background:rgba(255,255,255,.08);padding:2px 6px;border-radius:6px}
     footer{opacity:.75;margin-top:24px;font-size:.9rem}
+    .lang-switch{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 24px}
+    .lang-btn{border:1px solid #77e1ff;background:transparent;color:#77e1ff;padding:6px 10px;border-radius:8px;cursor:pointer}
+    .lang-btn.active{background:#77e1ff;color:#0b0f18;font-weight:700}
+    .lang{display:none}
+    .lang.active{display:block}
   </style>
 </head>
 <body>
   <div class="wrap">
-    <h1>Beat The Tower — Help &amp; Support</h1>
-    <p>Welcome! This page covers gameplay tips, power-ups, leaderboards, ads/shields, and troubleshooting.</p>
+    <h1 id="page-title">Beat The Tower — Help &amp; Support</h1>
 
-    <div class="card">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:support@guidebeatthetower.com">gabrielemonte.mi@gmail.com</a></p>
+    <!-- Language Switcher -->
+    <div class="lang-switch" role="tablist" aria-label="Language Switcher">
+      <button class="lang-btn active" data-lang="en" role="tab" aria-selected="true">🇬🇧 English</button>
+      <button class="lang-btn" data-lang="it" role="tab" aria-selected="false">🇮🇹 Italiano</button>
+      <button class="lang-btn" data-lang="ja" role="tab" aria-selected="false">🇯🇵 日本語</button>
+      <button class="lang-btn" data-lang="ko" role="tab" aria-selected="false">🇰🇷 한국어</button>
+      <button class="lang-btn" data-lang="es" role="tab" aria-selected="false">🇪🇸 Español</button>
     </div>
 
-    <div class="card">
-      <h2>Gameplay</h2>
-      <ul>
-        <li>Tap to drop blocks and stack them as precisely as possible.</li>
-        <li>Perfect drops build your combo and increase points.</li>
-        <li>Use shields to auto-rescue once and continue your run.</li>
-      </ul>
-    </div>
+    <!-- EN -->
+    <section class="lang active" id="lang-en" lang="en">
+      <p>Welcome! This page covers gameplay tips, power-ups, leaderboards, ads/shields, and troubleshooting.</p>
 
-    <div class="card">
-      <h2>Power-ups</h2>
-      <ul>
-        <li><strong>Double Score</strong>: temporarily doubles base points.</li>
-        <li><strong>Fever</strong>: easier perfects, steady block width, boosted scoring.</li>
-        <li><strong>Slow-Mo</strong>: slows the moving block for precision drops.</li>
-        <li><strong>Jackpot</strong>: turns blocks gold and multiplies points significantly.</li>
-        <li><strong>Maxi Block</strong>: next placement keeps full width (no trim) and counts as Perfect.</li>
-        <li><strong>Rainbow Block</strong>: perfecting it grants a big bonus + effects.</li>
-        <li><strong>Super Block</strong>: special block with extra Perfect bonus.</li>
-        <li><strong>Shield</strong>: one-time auto-rescue on a miss.</li>
-      </ul>
-    </div>
+      <div class="card">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:gabrielemonte.mi@gmail.com">gabrielemonte.mi@gmail.com</a></p>
+      </div>
 
-    <footer>© 2025 Beat The Tower</footer>
+      <div class="card">
+        <h2>Gameplay</h2>
+        <ul>
+          <li>Tap to drop blocks and stack them as precisely as possible.</li>
+          <li>Perfect drops build your combo and increase points.</li>
+          <li>Use shields to auto-rescue once and continue your run.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Power-ups</h2>
+        <ul>
+          <li><strong>Double Score</strong>: temporarily doubles base points.</li>
+          <li><strong>Fever</strong>: easier perfects, steady block width, boosted scoring.</li>
+          <li><strong>Slow-Mo</strong>: slows the moving block for precision drops.</li>
+          <li><strong>Jackpot</strong>: turns blocks gold and multiplies points significantly.</li>
+          <li><strong>Maxi Block</strong>: next placement keeps full width (no trim) and counts as Perfect.</li>
+          <li><strong>Rainbow Block</strong>: perfecting it grants a big bonus + effects.</li>
+          <li><strong>Super Block</strong>: special block with extra Perfect bonus.</li>
+          <li><strong>Shield</strong>: one-time auto-rescue on a miss.</li>
+        </ul>
+      </div>
+
+      <footer>© 2025 Beat The Tower</footer>
+    </section>
+
+    <!-- IT -->
+    <section class="lang" id="lang-it" lang="it">
+      <p>Benvenuto/a! Questa pagina copre suggerimenti di gioco, potenziamenti, classifiche, annunci/scudi e risoluzione dei problemi.</p>
+
+      <div class="card">
+        <h2>Contatti</h2>
+        <p>Email: <a href="mailto:gabrielemonte.mi@gmail.com">gabrielemonte.mi@gmail.com</a></p>
+      </div>
+
+      <div class="card">
+        <h2>Gameplay</h2>
+        <ul>
+          <li>Tocca per far cadere i blocchi e impilarli con la massima precisione.</li>
+          <li>I “Perfect” aumentano la combo e i punti.</li>
+          <li>Usa gli scudi per un salvataggio automatico e continua la partita.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Potenziamenti</h2>
+        <ul>
+          <li><strong>Doppio punteggio</strong>: raddoppia temporaneamente i punti base.</li>
+          <li><strong>Fever</strong>: Perfect più facili, larghezza stabile, punteggio potenziato.</li>
+          <li><strong>Rallentatore</strong>: rallenta il blocco in movimento per tiri precisi.</li>
+          <li><strong>Jackpot</strong>: i blocchi diventano dorati e moltiplicano i punti.</li>
+          <li><strong>Blocco Maxi</strong>: il prossimo posizionamento mantiene la larghezza piena (senza taglio) e vale come Perfect.</li>
+          <li><strong>Blocco Arcobaleno</strong>: se fai Perfect ottieni un grande bonus + effetti.</li>
+          <li><strong>Super Blocco</strong>: blocco speciale con bonus Perfect extra.</li>
+          <li><strong>Scudo</strong>: salvataggio automatico una volta in caso di errore.</li>
+        </ul>
+      </div>
+
+      <footer>© 2025 Beat The Tower</footer>
+    </section>
+
+    <!-- JA -->
+    <section class="lang" id="lang-ja" lang="ja">
+      <p>ようこそ！このページでは、ゲームプレイのコツ、パワーアップ、ランキング、広告／シールド、トラブルシューティングについて案内します。</p>
+
+      <div class="card">
+        <h2>お問い合わせ</h2>
+        <p>メール: <a href="mailto:gabrielemonte.mi@gmail.com">gabrielemonte.mi@gmail.com</a></p>
+      </div>
+
+      <div class="card">
+        <h2>ゲームプレイ</h2>
+        <ul>
+          <li>タップしてブロックを落とし、できるだけ正確に積み上げましょう。</li>
+          <li>パーフェクトを重ねるとコンボが伸び、得点が増えます。</li>
+          <li>シールドを使うと、ミス時に一度だけ自動セーブされ続行できます。</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>パワーアップ</h2>
+        <ul>
+          <li><strong>ダブルスコア</strong>：一定時間、基本ポイントが2倍。</li>
+          <li><strong>フィーバー</strong>：パーフェクトが出やすく、幅が安定、得点アップ。</li>
+          <li><strong>スローモーション</strong>：移動ブロックがゆっくりになり、狙いやすく。</li>
+          <li><strong>ジャックポット</strong>：ブロックがゴールド化し、大量ボーナス。</li>
+          <li><strong>マキシブロック</strong>：次の配置は幅が削られず、パーフェクト扱い。</li>
+          <li><strong>レインボーブロック</strong>：パーフェクトで大きなボーナス＋演出。</li>
+          <li><strong>スーパーブロック</strong>：追加パーフェクトボーナスを持つ特別ブロック。</li>
+          <li><strong>シールド</strong>：ミス時に一度だけ自動セーブ。</li>
+        </ul>
+      </div>
+
+      <footer>© 2025 Beat The Tower</footer>
+    </section>
+
+    <!-- KO -->
+    <section class="lang" id="lang-ko" lang="ko">
+      <p>환영합니다! 이 페이지에서는 게임 플레이 팁, 파워업, 리더보드, 광고/실드, 문제 해결을 안내합니다.</p>
+
+      <div class="card">
+        <h2>문의</h2>
+        <p>이메일: <a href="mailto:gabrielemonte.mi@gmail.com">gabrielemonte.mi@gmail.com</a></p>
+      </div>
+
+      <div class="card">
+        <h2>게임플레이</h2>
+        <ul>
+          <li>탭하여 블록을 떨어뜨리고 최대한 정확하게 쌓으세요.</li>
+          <li>퍼펙트를 연속으로 내면 콤보가 쌓이고 점수가 증가합니다.</li>
+          <li>실드는 한 번 자동 구제되어 진행을 이어갈 수 있습니다.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>파워업</h2>
+        <ul>
+          <li><strong>더블 스코어</strong>: 일정 시간 기본 점수 2배.</li>
+          <li><strong>피버</strong>: 퍼펙트가 쉬워지고, 블록 너비가 안정, 점수 상승.</li>
+          <li><strong>슬로모</strong>: 이동 블록 속도를 낮춰 정밀 배치.</li>
+          <li><strong>잭팟</strong>: 블록이 금빛으로 변하고 점수가 크게 증가.</li>
+          <li><strong>맥시 블록</strong>: 다음 배치는 너비가 줄지 않으며 퍼펙트 처리.</li>
+          <li><strong>레인보우 블록</strong>: 퍼펙트 시 큰 보너스와 연출.</li>
+          <li><strong>슈퍼 블록</strong>: 추가 퍼펙트 보너스가 있는 특별 블록.</li>
+          <li><strong>실드</strong>: 실수 시 한 번 자동으로 구해줌.</li>
+        </ul>
+      </div>
+
+      <footer>© 2025 Beat The Tower</footer>
+    </section>
+
+    <!-- ES -->
+    <section class="lang" id="lang-es" lang="es">
+      <p>¡Bienvenido/a! Esta página cubre consejos de juego, potenciadores, clasificaciones, anuncios/escudos y solución de problemas.</p>
+
+      <div class="card">
+        <h2>Contacto</h2>
+        <p>Email: <a href="mailto:gabrielemonte.mi@gmail.com">gabrielemonte.mi@gmail.com</a></p>
+      </div>
+
+      <div class="card">
+        <h2>Jugabilidad</h2>
+        <ul>
+          <li>Toca para soltar bloques y apílalos con la máxima precisión.</li>
+          <li>Los Perfectos aumentan tu combo y los puntos.</li>
+          <li>Usa escudos para un rescate automático y continuar la partida.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Potenciadores</h2>
+        <ul>
+          <li><strong>Doble puntuación</strong>: duplica temporalmente los puntos base.</li>
+          <li><strong>Fiebre</strong>: perfectos más fáciles, ancho estable, puntuación aumentada.</li>
+          <li><strong>Cámara lenta</strong>: reduce la velocidad del bloque para mayor precisión.</li>
+          <li><strong>Jackpot</strong>: los bloques se vuelven dorados y multiplican notablemente los puntos.</li>
+          <li><strong>Bloque Maxi</strong>: la próxima colocación mantiene el ancho completo (sin cortar) y cuenta como Perfecto.</li>
+          <li><strong>Bloque Arcoíris</strong>: al lograr Perfecto otorga una gran bonificación + efectos.</li>
+          <li><strong>Súper Bloque</strong>: bloque especial con bonificación extra de Perfecto.</li>
+          <li><strong>Escudo</strong>: rescate automático una vez al fallar.</li>
+        </ul>
+      </div>
+
+      <footer>© 2025 Beat The Tower</footer>
+    </section>
   </div>
+
+  <script>
+    const switchers = document.querySelectorAll('.lang-btn');
+    const langs = document.querySelectorAll('.lang');
+    const titleByLang = {
+      en: "Beat The Tower — Help & Support",
+      it: "Beat The Tower — Aiuto e Supporto",
+      ja: "Beat The Tower — ヘルプ＆サポート",
+      ko: "Beat The Tower — 도움말 & 지원",
+      es: "Beat The Tower — Ayuda y Soporte"
+    };
+    const pageTitle = document.getElementById('page-title');
+
+    function activate(lang){
+      switchers.forEach(b=>{
+        const on = b.dataset.lang === lang;
+        b.classList.toggle('active', on);
+        b.setAttribute('aria-selected', on ? 'true' : 'false');
+      });
+      langs.forEach(s=>s.classList.toggle('active', s.id === 'lang-'+lang));
+      document.documentElement.lang = lang;
+      if (pageTitle) pageTitle.textContent = titleByLang[lang] || titleByLang.en;
+      document.title = pageTitle.textContent;
+    }
+    switchers.forEach(b=>b.addEventListener('click',()=>activate(b.dataset.lang)));
+
+    // Auto-detect browser language once on load
+    const preferred = (navigator.language || 'en').slice(0,2);
+    if(['en','it','ja','ko','es'].includes(preferred)) activate(preferred);
+  </script>
 </body>
 </html>
